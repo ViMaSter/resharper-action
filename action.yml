@@ -9,7 +9,7 @@ inputs:
     required: false
 runs:
   using: docker
-  image: docker://vimaster/resharper-action
+  image: Dockerfile
   args:
     - sh
     - -c
