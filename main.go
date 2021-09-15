@@ -64,7 +64,7 @@ func dotnetRestore(slnPath string) {
 func generateReport(slnPath string) string {
 	outPath := filepath.Join(os.TempDir(), "report.xml")
 
-	cmd := exec.Command("inspectcode.sh", "--extensions=\"resharper-unity\" --output="+outPath, slnPath)
+	cmd := exec.Command("inspectcode.sh", "--mono=$(which mono) --extensions=\"resharper-unity\" --output="+outPath, slnPath)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
 
